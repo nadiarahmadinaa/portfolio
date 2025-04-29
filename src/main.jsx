@@ -1,10 +1,19 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
+import './App.css'
+import './components/Header.css'
+import './components/Hero.css'
+import './components/About.css'
+import './components/Experience.css'
+import './components/Projects.css'
+import './components/Skills.css'
+import './components/Contact.css'
+import './components/Footer.css'
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
     <App />
-  </StrictMode>,
+  </React.StrictMode>,
 )
