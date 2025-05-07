@@ -38,15 +38,19 @@ const About = () => {
         
         <div className={`about-content ${visible ? 'visible' : ''}`}>
           <div className="about-image">
-            <div className="image-container">
-              <div className="image-frame"></div>
-              <div className="image-placeholder">
-                {/* Replace with your actual photo */}
-                <div className="image-overlay">
-                  <div className="code-bg">&lt;/&gt;</div>
-                </div>
+          <div className="image-container">
+            <div className="image-frame"></div>
+            <div className="image-placeholder">
+              <img 
+                src="/images/personal-photo.png" 
+                alt="Nadia Rahmadina" 
+                className="profile-image"
+              />
+              <div className="image-overlay">
+                <div className="code-bg">&lt;/&gt;</div>
               </div>
             </div>
+          </div>
             
             <div className="about-stats">
               <div className="stat">
