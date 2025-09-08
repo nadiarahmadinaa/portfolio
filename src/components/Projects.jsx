@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { FaGithub, FaExternalLinkAlt, FaReact, FaPython, FaMicrochip, FaDocker, FaGitlab } from 'react-icons/fa';
-import { SiDjango, SiTailwindcss, SiFlutter, SiArduino, SiKubernetes, SiReact, SiC, SiJavascript } from 'react-icons/si';
+import { SiDjango, SiTailwindcss, SiFlutter, SiArduino, SiKubernetes, SiReact, SiC, SiJavascript, SiSpringboot, SiPostgresql } from 'react-icons/si';
 
 const Projects = () => {
   const [visible, setVisible] = useState(false);
@@ -25,6 +25,23 @@ const Projects = () => {
       ],
       featured: true,
       award: 'Top Project Award (Out of 80+ Teams)'
+    },
+    {
+      id: 'rizzerve',
+      title: 'RIZZerve',
+      description: 'A web-based restaurant management system.',
+      image: '/project-rosojogja.png', 
+      category: 'web',
+      technologies: ['Springboot', 'PostgreSQL', 'Docker', 'Tailwind CSS', 'Git', 'AWS EC2', 'ReactJS', 'Prometheus', 'Grafana'],
+      icons: [<SiSpringboot key="springboot" />, <SiPostgresql key="postgresql" />, <FaDocker key="docker" />, <SiTailwindcss key="tailwind" />,<FaGithub key="github" />],
+      links: [
+        {
+          url: 'https://github.com/orgs/Advprog2025-B08/repositories',
+          icon: <FaGithub />,
+          label: 'GitHub'
+        }
+      ],
+      featured: true,
     },
     {
       id: 'kepepet-ewallet',
@@ -69,11 +86,6 @@ const Projects = () => {
       technologies: ['Arduino', 'AVR ATmega', 'Microchip Studio', 'Python'],
       icons: [<SiArduino key="arduino" />, <FaPython key="python" />, <FaMicrochip key="microchip" />],
       links: [
-        {
-          url: 'https://github.com/nadiarahmadinaa/digital-twin',
-          icon: <FaGithub />,
-          label: 'GitHub'
-        }
       ],
       featured: true
     },
@@ -87,9 +99,9 @@ const Projects = () => {
       icons: [<SiArduino key="arduino" />, <FaMicrochip key="microchip" />,<SiC key="c" />],
       links: [
         {
-          url: 'https://github.com/nadiarahmadinaa/digital-twin',
-          icon: <FaGithub />,
-          label: 'GitHub'
+          url: 'https://www.researchgate.net/publication/370046164_Designing_Plant_Monitoring_System_Using_Arduino',
+          icon: <FaExternalLinkAlt />,
+          label: 'Research Paper'
         }
       ],
       featured: true

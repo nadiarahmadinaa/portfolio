@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { FaBriefcase, FaUserGraduate, FaDesktop, FaLaptopCode } from 'react-icons/fa';
+import { FaBriefcase, FaUserGraduate, FaDesktop, FaLaptopCode, FaTrophy } from 'react-icons/fa';
 
 const Experience = () => {
   const [visible, setVisible] = useState(false);
@@ -34,53 +34,74 @@ const Experience = () => {
 
   const workExperience = [
     {
-      title: "Lead of Network, Security, and Operating System Special Interest Group",
-      company: "RISTEK",
-      duration: "February 2025 - Present",
+      title: "IT Consultant",
+      company: "Aurorasoft",
+      duration: "July 2025 - Present",
       description: [
-        "Leading a student-led Special Interest Group (SIG) focused on network engineering, cybersecurity, and operating systems under RISTEK.",
-        "Organizing internal classes and hands-on projects to deepen members' technical skills.",
-        "Designing and managing practical labs on topics like digital forensics, system hardening, and penetration testing.",
-        "Mentoring members on related competitions such as CTF (Capture the Flag)."
+        "Customized Bitrix24 PHP backend to align with client-specific business processes and logic.",
+        "Created and presented pitch decks to clients, securing buy-in and successful CRM adoption.",
+        "Managed client communications and led end-to-end CRM implementation, including technical documentation and post-deployment support."
       ],
-      icon: <FaLaptopCode />
+      icon: <FaBriefcase />
     },
     {
-      title: "Teaching Assistant of Introduction to Computer Organization",
-      company: "University of Indonesia",
-      duration: "January 2025 - Present",
+      title: "IT Project Intern",
+      company: "PT Astra International Tbk",
+      duration: "June - August 2025",
       description: [
-        "Guided 100+ students in mastering computer architecture, assembly programming, and hardware-software integration.",
-        "Created supplemental materials and live tutorials that enhanced understanding of complex system design concepts.",
-        "Provided personalized support that improved student performance and critical thinking in technical problem sets."
+        "Increased AI response precision by 30% through workflow enhancements and prompt optimization.",
+        "Developed and maintained Selenium-based automated test suites for AI regression testing.",
+        "Cleaned and organized Excel datasets to deliver accurate inputs for RAG-based AI systems."
       ],
-      icon: <FaUserGraduate />
+      icon: <FaBriefcase />
+    },
+    {
+      title: "Junior Software Developer",
+      company: "Harbour Energy",
+      duration: "June - August 2025",
+      description: [
+        "Designed UI/UX and developed responsive frontend for a Chemical Registry web platform.",
+        "Implemented automated regression testing using Pytest and Selenium, integrated within CI/CD pipelines to ensure deployment reliability.",
+        "Resolved bugs and developed features across infrastructure, backend, and frontend."
+      ],
+      icon: <FaBriefcase />
     },
     {
       title: "IT Intern",
       company: "Jakarta Smart City",
-      duration: "July - August 2024",
+      duration: "June - August 2024",
       description: [
-        "Built and deployed a secure web application that automated webinar registration, attendance tracking, and certificate generation, improving operational efficiency.",
-        "Increased data accuracy and reduced human error by implementing secure authentication and real-time validation features.",
-        "Delivered the solution using Django and Tailwind CSS."
+        "Developed a full-stack automation platform (Django & Tailwind) to streamline webinar logistics.",
+        "Ensured secure authentication and accurate data synchronization across workflows."
       ],
       icon: <FaBriefcase />
+    }
+  ];
+  const organizationExperience = [
+    {
+      title: "Lead of Network, Security, and Operating System Special Interest Group",
+      company: "RISTEK",
+      duration: "February 2025 - Present",
+      description: [
+        "Led technical deep-dives and projects in digital forensics, networking, and penetration testing.",
+        "Created CTF tools and automated scripts for network analysis using Bash and Python.",
+        "Mentored members on TCP/IP protocols, packet analysis, and system security."
+      ],
+      icon: <FaLaptopCode />
     },
     {
       title: "Scientific Committee of CTF (Capture The Flag) Competition",
       company: "COMPFEST 16",
       duration: "April 2024 - Present",
       description: [
-        "Delivered an educational session on Digital Forensics to 100+ attendees, enhancing public knowledge on cybersecurity basics.",
-        "Developed three original CTF challenges in steganography, memory forensics, and log analysis—testing real-world debugging and exploit discovery skills.",
-        "Worked collaboratively in a team to ensure challenge quality, clarity, and progressive difficulty."
+        "Conducted workshop with 100+ attendees on PCAP analysis, digital forensics, and network traces.",
+        "Designed digital forensics CTF challenges simulating real-world attacks involving memory dumps (Windows, Linux, Android), suspicious file transfers, and steganography."
       ],
       icon: <FaDesktop />
     }
   ];
 
-  const hackerExperience = [
+  const achievements = [
     {
       title: "Runner-up",
       company: "World Innovations Day Hackathon",
@@ -88,7 +109,7 @@ const Experience = () => {
       description: [
         "Led a team of 5 in developing and pitching a web-based solution in accordance to SDG #3 (Good Health and Well-being)."
       ],
-      icon: <FaLaptopCode />
+      icon: <FaTrophy />
     },
     {
       title: "Semifinalist",
@@ -97,16 +118,30 @@ const Experience = () => {
       description: [
         "Led a team of 4 to construct an app and IoT-based start-up idea in the agricultural sector, benefiting Indonesian farmers."
       ],
-      icon: <FaLaptopCode />
+      icon: <FaTrophy />
     },
     {
-      title: "Presenter",
+      title: "Research Presenter",
       company: "2nd International Conference on Research and Development",
       duration: "November 2022",
       description: [
         "Co-wrote and presented a research paper: \"Designing Plant Monitoring System using Arduino.\""
       ],
       icon: <FaDesktop />
+    }
+  ];
+
+  const education = [
+    {
+      title: "Bachelor of Computer Science",
+      company: "University of Indonesia",
+      duration: "August 2023 - Present (Expected 2027)",
+      description: [
+        "Current GPA: 3.95 / 4.00",
+        "Focusing on Full-stack Web Development, Cybersecurity, and Internet of Things (IoT)",
+        "Active in RISTEK (student organization for technology and computer science)"
+      ],
+      icon: <FaUserGraduate />
     }
   ];
 
@@ -124,10 +159,16 @@ const Experience = () => {
               <FaBriefcase /> Work Experience
             </button>
             <button 
-              className={`tab-btn ${activeTab === 'hacker' ? 'active' : ''}`}
-              onClick={() => setActiveTab('hacker')}
+              className={`tab-btn ${activeTab === 'organization' ? 'active' : ''}`}
+              onClick={() => setActiveTab('organization')}
             >
-              <FaLaptopCode /> Achievements
+              <FaUserGraduate /> Organization Experience
+            </button>
+            <button 
+              className={`tab-btn ${activeTab === 'achievements' ? 'active' : ''}`}
+              onClick={() => setActiveTab('achievements')}
+            >
+              <FaTrophy /> Achievements
             </button>
           </div>
           
@@ -156,9 +197,33 @@ const Experience = () => {
               </div>
             </div>
             
-            <div className={`tab-content ${activeTab === 'hacker' ? 'active' : ''}`}>
+            <div className={`tab-content ${activeTab === 'organization' ? 'active' : ''}`}>
               <div className="timeline">
-                {hackerExperience.map((exp, index) => (
+                {organizationExperience.map((exp, index) => (
+                  <div key={index} className="timeline-item">
+                    <div className="timeline-icon">{exp.icon}</div>
+                    <div className="timeline-content">
+                      <div className="timeline-header">
+                        <h3>{exp.title}</h3>
+                        <span className="company">{exp.company}</span>
+                        <span className="duration">{exp.duration}</span>
+                      </div>
+                      <div className="timeline-body">
+                        <ul>
+                          {exp.description.map((item, idx) => (
+                            <li key={idx}>{item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div className={`tab-content ${activeTab === 'achievements' ? 'active' : ''}`}>
+              <div className="timeline">
+                {achievements.map((exp, index) => (
                   <div key={index} className="timeline-item">
                     <div className="timeline-icon">{exp.icon}</div>
                     <div className="timeline-content">

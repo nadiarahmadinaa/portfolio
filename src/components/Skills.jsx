@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { 
   FaPython, FaJava, FaCode, FaServer, FaDatabase, FaLaptopCode, 
-  FaTools, FaShieldAlt, FaMicrochip, FaStar 
+  FaTools, FaShieldAlt, FaMicrochip, FaStar, FaPhp
 } from 'react-icons/fa';
 import { 
   SiDjango, SiReact, SiTailwindcss, SiPostgresql, SiDocker, 
@@ -46,6 +46,13 @@ const Skills = () => {
           icon: <FaCode />, 
           description: 'Used for low-level programming and system operations.',
           projects: ['Arduino & AVR Projects']
+        },
+        { 
+          name: 'PHP', 
+          proficiency: 'Basic', 
+          icon: <FaPhp />, 
+          description: 'Used for Bitrix24 customization.',
+          projects: ['Bitrix24 Projects']
         }
       ]
     },
